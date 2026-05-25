@@ -19,8 +19,15 @@
         <maven.compiler.target>17</maven.compiler.target>
     </properties>
 
-    <!-- Log4j2 - VULNERABLE CVE-2021-44228 (Log4Shell) -->
+    <!-- CVE-2015-6420 (Commons Collections) & CVE-2021-44228 (Log4Shell) -->
     <dependencies>
+        <!-- Apache Commons Collections - VULNERABLE CVE-2015-6420 -->
+        <dependency>
+            <groupId>commons-collections</groupId>
+            <artifactId>commons-collections</artifactId>
+            <version>3.2.2</version>
+        </dependency>
+        <!-- Log4j2 - VULNERABLE CVE-2021-44228 (Log4Shell) -->
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-core</artifactId>
@@ -46,5 +53,14 @@
             </plugin>
         </plugins>
     </build>
+
+    <!-- Publish to GitHub Packages -->
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub Packages</name>
+            <url>https://maven.pkg.github.com/jcequispe/demo-utilities-jakarta</url>
+        </repository>
+    </distributionManagement>
 
 </project>
