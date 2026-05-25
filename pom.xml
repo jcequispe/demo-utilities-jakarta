@@ -54,13 +54,4 @@
         </plugins>
     </build>
 
-    <!-- Publish to JitPack -->
-    <distributionManagement>
-        <repository>
-            <id>jitpack.io</id>
-            <name>JitPack</name>
-            <url>https://jitpack.io</url>
-        </repository>
-    </distributionManagement>
-
 </project>
