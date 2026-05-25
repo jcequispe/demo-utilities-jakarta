@@ -19,9 +19,14 @@
         <maven.compiler.target>17</maven.compiler.target>
     </properties>
 
-    <!-- NO dependencies declared here - this is just a wrapper library
-         Apache Commons Collections will be provided by the consuming project -->
+    <!-- Apache Commons Collections - VULNERABLE 3.2.1 (optional, provided by consuming app) -->
     <dependencies>
+        <dependency>
+            <groupId>commons-collections</groupId>
+            <artifactId>commons-collections</artifactId>
+            <version>3.2.1</version>
+            <optional>true</optional>
+        </dependency>
     </dependencies>
 
     <build>
