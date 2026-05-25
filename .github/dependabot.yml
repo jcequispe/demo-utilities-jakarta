@@ -4,10 +4,9 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
-    security-updates-only: true
     open-pull-requests-limit: 10
     reviewers:
       - "jcequispe"
     commit-message:
-      prefix: "security"
+      prefix: "bump"
       include: "scope"
